@@ -23,7 +23,7 @@ jobs:
           node-version: 20
 
       - name: Pull from main
-        run: git pull origin main
+        run: git pull origin main --no-ff
 
       - name: Commit changes
         run: |

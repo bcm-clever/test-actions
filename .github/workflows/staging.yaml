@@ -25,8 +25,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --local user.email "bianca.machado@external.clevercorporate.com"
-          git config --local user.name "bcm-clever"
+          git config --global user.email "bianca.machado@external.clevercorporate.com"
+          git config --global user.name "bcm-clever"
           git commit -a -m "Bump package.json version [skip ci]"
 
       - name: Push changes

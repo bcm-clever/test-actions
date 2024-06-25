@@ -9,6 +9,11 @@ jobs:
   create_pr:
     runs-on: ubuntu-latest
     steps:
+      - name: Set user
+        run: |
+          git config --global user.email "bianca.machado@external.clevercorporate.com"
+          git config --global user.name "bcm-clever"
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -25,8 +30,6 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.email "bianca.machado@external.clevercorporate.com"
-          git config --global user.name "bcm-clever"
           git commit -a -m "Bump package.json version [skip ci]"
 
       - name: Push changes
